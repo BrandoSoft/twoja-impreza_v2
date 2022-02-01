@@ -31,7 +31,7 @@ router.get('/', auth, async (req, res) => {
 // @access  Public
 
 router.post('/', [
-    check('email', 'Prosze podać własciwy adres email').isEmail(),
+    check('email', 'Prosze podać właściwy adres email').isEmail(),
     check('password', 'Hasło jest wymagane').exists(),
 
 ], async (req, res) => {

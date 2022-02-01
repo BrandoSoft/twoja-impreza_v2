@@ -30,7 +30,7 @@ router.post('/', [
         let user = await User.findOne({ email });
 
         if (user) {
-            return res.status(400).json({ errors: [{ msg: 'User alredy exists' }] })
+            return res.status(400).json({ errors: [{ msg: '{podany adres Email, został już zarejestrowany' }] })
         }
 
         // Get users gravatar
